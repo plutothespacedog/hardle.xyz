@@ -21,7 +21,7 @@ function App() {
     });
   }, []);
   
-  const correctWord = "RIGHT";
+  const correctWord = "HIRED";
   /*
   useEffect(() => {
     generateSecretSet().then((words) => {
