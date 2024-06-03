@@ -1,0 +1,267 @@
+.App {
+  text-align: center;
+  background-color: #121212;
+  width: 100vw;
+  height: 100vh;
+  /* display: flex; */
+  color: white;
+}
+
+body {
+  padding: 0%;
+  margin: 0;
+}
+
+nav {
+  height: 60px;
+  width: 100%;
+  margin: 0;
+  border-bottom: 1px solid grey;
+  display: grid;
+  place-items: center;
+}
+
+nav h1 {
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  color: white;
+  font-size: 45px;
+}
+.game {
+  width: 100vw;
+  height: calc(100vh - 100px);
+  display: flex;
+  align-items: center;
+  padding-top: 50px;
+  flex-direction: column;
+}
+
+.board {
+  width: 450px;
+  height: 550px;
+  border: 1px solid #121212;
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  flex: 33%;
+  display: flex;
+  flex-direction: row;
+  margin: 5px;
+}
+
+.letter {
+  flex: 33%;
+  height: 100%;
+  border: 1px solid grey;
+  margin: 5px;
+  display: grid;
+  place-items: center;
+  font-size: 30px;
+  font-weight: bolder;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#correct {
+  background-color: #528d4e;
+}
+
+#almost {
+  background-color: #b49f39;
+}
+
+#error {
+  background-color: #3a393c;
+}
+
+#blank {
+  background-color: #121212;
+}
+
+.keyboard {
+  width: 700px;
+  height: 300px;
+  margin-top: 60px;
+}
+
+.line1 {
+  flex: 33%;
+  display: flex;
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+}
+.line2 {
+  flex: 33%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 5px;
+}
+.line3 {
+  flex: 33%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 5px;
+}
+
+.key {
+  width: 50px;
+  height: 70px;
+  margin: 5px;
+  border-radius: 4px;
+  display: grid;
+  place-items: center;
+  font-size: 20px;
+  background-color: grey;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+}
+
+#big {
+  width: 100px;
+}
+#disabled {
+  background-color: #3a393c;
+}
+
+@media only screen and (max-width: 600px){
+  .App {
+    text-align: center;
+    background-color: #121212;
+    width: 100vw;
+    height: 100vh;
+    /* display: flex; */
+    color: white;
+  }
+
+  body {
+    padding: 0%;
+    margin: 0;
+  }
+
+  nav {
+    height: 5vh;
+    width: 100%;
+    margin: 0;
+    border-bottom: 1px solid grey;
+    display: grid;
+    place-items: center;
+  }
+
+  nav h1 {
+    margin: 0;
+    font-family: Helvetica, Arial, sans-serif;
+    color: white;
+    font-size: 1.2rem;
+  }
+  .game {
+    width: 100vw;
+    height: calc(100vh - 70px);
+    display: flex;
+    align-items: center;
+    padding-top: 0vh;
+    flex-direction: column;
+  }
+
+  .board {
+    width: 99vw;
+    height: 85vh;
+    border: 1px solid #121212;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .row {
+    flex: 33%;
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+  }
+
+  .letter {
+    flex: 33%;
+    height: 100%;
+    border: 1px solid grey;
+    margin: 4px;
+    display: grid;
+    place-items: center;
+    font-size: 1em;
+    font-weight: bolder;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  #correct {
+    background-color: #528d4e;
+  }
+
+  #almost {
+    background-color: #b49f39;
+  }
+
+  #error {
+    background-color: #3a393c;
+  }
+
+  #blank {
+    background-color: #121212;
+  }
+
+  .keyboard {
+    width: 100vw;
+    height: 30vh;
+    margin-top: 1vh;
+  }
+
+  .line1 {
+    flex: 33%;
+    display: flex;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+  }
+  .line2 {
+    flex: 33%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 5px;
+  }
+  .line3 {
+    flex: 33%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 5px;
+  }
+
+  .key {
+    width: 1.5em;
+    height: 2em;
+    margin: 0.2em;
+    border-radius: 4px;
+    display: grid;
+    place-items: center;
+    font-size: 1em;
+    background-color: grey;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+  }
+
+  #big {
+    width: 5em;
+    font-size: 0.7em;
+    height: 3em;
+  }
+  #disabled {
+    background-color: #3a393c;
+  }
+}
