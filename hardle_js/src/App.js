@@ -12,7 +12,7 @@ function App() {
   const [currAttempt, setCurrrAttempt] = useState({attempt: 0, letterPos: 0});
   const [guessSet, setGuessSet] = useState(new Set());
   const [secretSet, setSecretSet] = useState(new Set());
-  //const [correctWord, setCorrectWord] = useState("");
+  const [correctWord, setCorrectWord] = useState("");
   const [gameOver, setGameOver] = useState({gameOver: false, guessedWord: false});
 
   useEffect(() => {
@@ -21,16 +21,16 @@ function App() {
     });
   }, []);
   
-  const correctWord = "HIRED";
-  /*
+  //const correctWord = "hired";
+  
   useEffect(() => {
     generateSecretSet().then((words) => {
       setSecretSet(words.secretSet);
       setCorrectWord(words.todaysWord);
     });
   }, []);
-
-  */
+  
+  
   const onSelectLetter = (keyVal) => {
     if (currAttempt.letterPos >4) return;
     const newBoard = [...board];
@@ -62,7 +62,7 @@ function App() {
       return;
     }
 
-    if (currWord === correctWord) {
+    if (currWord === correctWord.toUpperCase()) {
       setGameOver({gameOver: true, guessedWord: true});
       return;
     }

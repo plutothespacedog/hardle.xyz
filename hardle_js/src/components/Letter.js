@@ -9,7 +9,7 @@ function Letter({letterPos, attemptVal}) {
 
   const correct = correctWord.toUpperCase()[letterPos] === letter;
   const almost =!correct && letter !== "" && correctWord.toUpperCase().includes(letter)
-  && currWord.split(letter).length <= correctWord.split(letter).length;
+  && currWord.split(letter).length <= correctWord.toUpperCase().split(letter).length;
 
   const letterState = (currAttempt.attempt === 10 || gameOver.guessedWord) && 
   (correct ? "correct" : almost ? "almost" : "error");

@@ -11,7 +11,7 @@ function GreenCount({attemptVal}) {
   }
 
   for (let i = 0; i<5; i++) {
-    if(rowsWord[i] === correctWord[i]){
+    if(rowsWord[i] === correctWord.toUpperCase()[i]){
       greenCount ++;
     }
   }

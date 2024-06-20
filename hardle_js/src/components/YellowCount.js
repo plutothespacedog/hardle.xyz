@@ -12,7 +12,7 @@ function YellowCount({attemptVal}) {
 
   let counter = 0
   for (const char of rowsWord) {
-    if (correctWord.toUpperCase().includes(char) && char !== correctWord.toUpperCase()[counter] && rowsWord.split(char).length <= correctWord.split(char).length){
+    if (correctWord.toUpperCase().includes(char) && char !== correctWord.toUpperCase()[counter] && rowsWord.split(char).length <= correctWord.toUpperCase().split(char).length){
       yellowCount ++;
     }
     counter ++

@@ -6,8 +6,8 @@ function GameOver() {
   return (
     <div className='gameOver'>
         <h3>{gameOver.guessedWord ? "You Won!" : "You failed!"}</h3>
-        <h3>Correct Word Was: {correctWord}</h3>
-        {gameOver.guessedWord && (<h3> You guessed in {currAttempt.attempt} attempts</h3>)}
+        {!gameOver.guessedWord && (<h3>Correct Word Was: {correctWord}</h3>)}
+        {gameOver.guessedWord && (<h3> You solved in {currAttempt.attempt} {currAttempt.attempt === 1 ? "attempt" : "attempts"}</h3>)}
     </div>
   )
 }
