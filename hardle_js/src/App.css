@@ -136,7 +136,6 @@ nav h1 {
     background-color: #121212;
     width: 100vw;
     height: 100vh;
-    /* display: flex; */
     color: white;
   }
 
@@ -146,7 +145,7 @@ nav h1 {
   }
 
   nav {
-    height: 5vh;
+    height: 4vh;
     width: 100%;
     margin: 0;
     border-bottom: 1px solid grey;
@@ -165,13 +164,13 @@ nav h1 {
     height: calc(100vh - 70px);
     display: flex;
     align-items: center;
-    padding-top: 0vh;
+    padding-top: 1vh;
     flex-direction: column;
   }
 
   .board {
-    width: 99vw;
-    height: 85vh;
+    width: 90vw;
+    height: 63vh;
     border: 1px solid #121212;
     display: flex;
     flex-direction: column;
@@ -181,12 +180,12 @@ nav h1 {
     flex: 33%;
     display: flex;
     flex-direction: row;
-    margin: 5px;
+    margin: 1px;
   }
 
   .letter {
     flex: 33%;
-    height: 100%;
+    height: 80%;
     border: 1px solid grey;
     margin: 4px;
     display: grid;
@@ -215,8 +214,8 @@ nav h1 {
 
   .keyboard {
     width: 100vw;
-    height: 30vh;
-    margin-top: 1vh;
+    height: 40vh;
+    margin-top: 0vh;
   }
 
   .line1 {
@@ -225,27 +224,27 @@ nav h1 {
     flex-direction: row;
     display: flex;
     justify-content: center;
-    margin: 5px;
+    margin: 1px;
   }
   .line2 {
     flex: 33%;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: 5px;
+    margin: 1px;
   }
   .line3 {
     flex: 33%;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: 5px;
+    margin: 1px;
   }
 
   .key {
-    width: 1.5em;
-    height: 2em;
-    margin: 0.2em;
+    width: 2.5em;
+    height: 3em;
+    margin: 0.1em;
     border-radius: 4px;
     display: grid;
     place-items: center;
@@ -254,12 +253,13 @@ nav h1 {
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     cursor: pointer;
+    user-select: none;
   }
 
   #big {
     width: 5em;
-    font-size: 0.7em;
-    height: 3em;
+    font-size: 0.8em;
+    height: 3.73em;
   }
   #disabled {
     background-color: #3a393c;
