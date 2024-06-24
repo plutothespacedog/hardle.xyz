@@ -2,6 +2,7 @@ import './App.css';
 import Board from './components/Board';
 import Keyboard from './components/Keyboard';
 import GameOver from './components/GameOver';
+import Help from './components/Help';
 import {createContext, useState, useEffect} from "react";
 import { boardDefault, generateGuessesSet, generateSecretSet } from './components/Words';
 

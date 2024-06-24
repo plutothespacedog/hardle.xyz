@@ -5,6 +5,7 @@
   height: 100vh;
   /* display: flex; */
   color: white;
+  overflow-y: auto;
 }
 
 body {
