@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.cc0189d7.css",
-    "main.js": "/static/js/main.cd12f4a7.js",
+    "main.css": "/static/css/main.c8cfc18f.css",
+    "main.js": "/static/js/main.791be29e.js",
     "static/js/453.2aa0abdb.chunk.js": "/static/js/453.2aa0abdb.chunk.js",
     "static/media/wordle-Ta.txt": "/static/media/wordle-Ta.bc955d5becc921fe5fd4.txt",
     "static/media/wordle-La.txt": "/static/media/wordle-La.6ace1dbf5cae3fc37fc3.txt",
     "index.html": "/index.html",
-    "main.cc0189d7.css.map": "/static/css/main.cc0189d7.css.map",
-    "main.cd12f4a7.js.map": "/static/js/main.cd12f4a7.js.map",
+    "main.c8cfc18f.css.map": "/static/css/main.c8cfc18f.css.map",
+    "main.791be29e.js.map": "/static/js/main.791be29e.js.map",
     "453.2aa0abdb.chunk.js.map": "/static/js/453.2aa0abdb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cc0189d7.css",
-    "static/js/main.cd12f4a7.js"
+    "static/css/main.c8cfc18f.css",
+    "static/js/main.791be29e.js"
   ]
 }
