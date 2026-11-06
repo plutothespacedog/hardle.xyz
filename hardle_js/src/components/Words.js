@@ -1,41 +1,29 @@
 import guessBank from "../wordle-Ta.txt"
 import secretBank from "../wordle-La.txt"
 
-export const boardDefault = [
-    ["","","","","","",""],
-    ["","","","","","",""],
-    ["","","","","","",""],
-    ["","","","","","",""],
-    ["","","","","","",""],
-    ["","","","","","",""],
-    ["","","","","","",""],
-    ["","","","","","",""],
-    ["","","","","","",""],
-    ["","","","","","",""]
-];
+const ROWS = 10;
+const COLS = 7;
 
+// A brand-new empty board. Each game needs its own copy because the game
+// writes letters into the rows directly.
+export const freshBoard = () =>
+    Array.from({ length: ROWS }, () => Array(COLS).fill(""));
+
+export const boardDefault = freshBoard();
+
+const loadWords = async (file) => {
+    const text = await (await fetch(file)).text();
+    return text.split("\n").map((w) => w.trim()).filter(Boolean);
+};
+
+// Every word you're allowed to guess.
 export const generateGuessesSet = async () => {
-    let guessSet;
-    let todaysWord;
-    await fetch(guessBank)
-        .then((response) => response.text())
-        .then((result) => {
-            const guessArray = result.split("\n");
-            todaysWord = guessArray[Math.floor(Math.random() * guessArray.length)];
-            guessSet = new Set(guessArray);
-        });
-    return {guessSet, todaysWord};
+    const words = await loadWords(guessBank);
+    return { guessSet: new Set(words) };
 };
 
-export const generateSecretSet = async () => {
-    let secretSet;
-    let todaysWord;
-    await fetch(secretBank)
-        .then((response) => response.text())
-        .then((result) => {
-            const secretArray = result.split("\n");
-            todaysWord = secretArray[Math.floor(Math.random() * secretArray.length)];
-            secretSet = new Set(secretArray);
-        });
-    return {secretSet, todaysWord};
-};
+// Possible answers (common words only).
+export const loadSecretWords = () => loadWords(secretBank);
+
+export const randomWord = (words) =>
+    words[Math.floor(Math.random() * words.length)];

@@ -1,25 +1,14 @@
 import React, {useContext} from 'react'
 import {AppContext} from "../App";
 
+// Left-hand tile: letters in the word but in the wrong spot.
 function YellowCount({attemptVal}) {
-  const {board, correctWord, currAttempt, gameOver} = useContext(AppContext);
+  const {rowCounts, currAttempt, gameOver} = useContext(AppContext);
+  const counts = rowCounts[attemptVal];
+  const yellowCount = counts ? counts.yellow : 0;
 
-  let rowsWord = "";
-  let yellowCount = 0;
-  for (let i = 0; i < 5; i++) {
-    rowsWord += board[attemptVal][i];
-  }
-
-  let counter = 0
-  for (const char of rowsWord) {
-    if (correctWord.toUpperCase().includes(char) && char !== correctWord.toUpperCase()[counter] && rowsWord.split(char).length <= correctWord.toUpperCase().split(char).length){
-      yellowCount ++;
-    }
-    counter ++
-  }
-
-  const revealYellowCount = currAttempt.attempt > attemptVal ? yellowCount : "";
-  const colorState = ((currAttempt.attempt > 9 || gameOver.guessedWord) ? "blank" : ((currAttempt.attempt > attemptVal && yellowCount !== 0) ? "almost" : "error"));
+  const revealYellowCount = counts ? yellowCount : "";
+  const colorState = ((currAttempt.attempt > 9 || gameOver.guessedWord) ? "blank" : ((counts && yellowCount !== 0) ? "almost" : "error"));
   return <div className='letter' id={colorState}>{revealYellowCount}</div>
 };
 

@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/classic/static/css/main.1bbb4faf.css",
+    "main.js": "/classic/static/js/main.c5f0321a.js",
+    "static/js/830.2a652aea.chunk.js": "/classic/static/js/830.2a652aea.chunk.js",
+    "static/media/wordle-Ta.txt": "/classic/static/media/wordle-Ta.bc955d5becc921fe5fd4.txt",
+    "static/media/wordle-La.txt": "/classic/static/media/wordle-La.6ace1dbf5cae3fc37fc3.txt",
+    "index.html": "/classic/index.html"
+  },
+  "entrypoints": [
+    "static/css/main.1bbb4faf.css",
+    "static/js/main.c5f0321a.js"
+  ]
+}
