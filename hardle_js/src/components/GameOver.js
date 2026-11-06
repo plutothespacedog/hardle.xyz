@@ -64,7 +64,7 @@ function ResultsModal({ onClose, onPlayAgain, onMenu, onLeaderboard }) {
     () => (won ? pick(WIN_HEADLINES[guesses] || ['You did it!']) : pick(LOSS_HEADLINES)),
     [won, guesses]
   )
-  const callout = suspicionMessage(won, guesses, timeMs)
+  const callout = suspicionMessage(mode, won, guesses, timeMs)
   const history = useMemo(
     () => (isFreestyle ? null : getDailyHistory(dailyNumber, { solved: won })),
     [isFreestyle, dailyNumber, won]

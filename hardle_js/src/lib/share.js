@@ -16,7 +16,7 @@ export function buildShareText({ mode, dailyNumber, won, guesses, timeMs, score,
       '🟩'.repeat(green) + '🟨'.repeat(yellow) + '⬜'.repeat(Math.max(0, 5 - green - yellow))
     );
 
-  const callout = suspicionShort(won, guesses, timeMs);
+  const callout = suspicionShort(mode, won, guesses, timeMs);
   return [
     `${title} ${result}  ${extras.join('  ')}`,
     ...(callout ? [callout] : []),

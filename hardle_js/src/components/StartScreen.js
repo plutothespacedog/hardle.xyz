@@ -83,9 +83,9 @@ function StartScreen({ ready, dailyNumber, dailyResult, dailyInProgress, onDaily
                 {dailyResult.solved
                   ? `Solved in ${dailyResult.guesses} ${dailyResult.guesses === 1 ? 'guess' : 'guesses'}, ${formatTime(dailyResult.timeMs)}`
                   : `Missed it — the word was ${dailyResult.word.toUpperCase()}`}
-                {suspicionShort(dailyResult.solved, dailyResult.guesses, dailyResult.timeMs) && (
+                {suspicionShort('daily', dailyResult.solved, dailyResult.guesses, dailyResult.timeMs) && (
                   <span className='startCallout'>
-                    {suspicionShort(dailyResult.solved, dailyResult.guesses, dailyResult.timeMs)}
+                    {suspicionShort('daily', dailyResult.solved, dailyResult.guesses, dailyResult.timeMs)}
                   </span>
                 )}
                 <span className='startNextPuzzle'>New puzzle at midnight</span>
